@@ -115,7 +115,11 @@ geom_timeline <- function() {
 #' 
 #' @export
 geom_timeline_label <- function(){
-  geom_timeline +
+  # graph_data <- eq_clean_data() 
+  # graph_data <- dplyr::left_join(graph_data, eq_location_clean(), by = 'I_D') 
+  # graph_data <- dplyr::filter(graph_data, COUNTRY == 'China' | COUNTRY == 'Usa')
+  
+  geom_timeline() +
     ggplot2::geom_text(ggplot2::aes(label = ifelse(graph_data$Richter_Magnitude >5, 
                                as.character(graph_data$City),'')),
             angle = 45, hjust = 'bottom', nudge_y = 0.1, size = 2) 
@@ -151,7 +155,6 @@ eq_create_label <- function() {
 #' @importFrom leaflet leaflet
 #' @importFrom leaflet addTiles
 #' @importFrom leaflet addCircleMarkers
-#' 
 #' @examples 
 #' eq_map('Date')
 eq_map <- function(annot_col = 'popup_text') {
