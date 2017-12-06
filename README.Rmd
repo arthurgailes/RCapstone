@@ -42,7 +42,7 @@ data <- eq_clean_data()
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
 ```{r graph_timeline, eval=T}
-RCapstone::geom_timeline()
+geom_timeline()
 ```
 
 ## Labeled arthquakes in US and China after 2000
