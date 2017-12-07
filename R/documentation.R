@@ -1,5 +1,5 @@
 #' Imports the U.S. National Oceanographic and Atmospheric Administation's (NOAA) 
-#' dataset of significant earthquakes for more info, visit: 
+#' dataset of significant earthquakes. For more info, visit: 
 #' \hret{https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1}{click here}
 #' 
 #' The package imports the data, cleans it, and then produces visualizations of earthquake
@@ -20,9 +20,9 @@
 #' @import magrittr
 #'
 #'@export
-eq_clean_data <- function(filename = 'data/signif.txt') {
+eq_clean_data <- function(filename = NOAA) {
   
-  table <- suppressMessages(readr::read_tsv(filename, progress = F)) 
+  table <- filename 
   table <- dplyr::filter(table, YEAR >=2000, is.na(LONGITUDE) ==F, is.na(LATITUDE) == F) 
   table <- dplyr::select(table, I_D, YEAR, MONTH, DAY, LONGITUDE, LATITUDE, 
                   Richter_Magnitude = EQ_MAG_ML, DEATHS, Magnitude = EQ_PRIMARY) 
@@ -57,8 +57,8 @@ eq_clean_data <- function(filename = 'data/signif.txt') {
 #' @importFrom magrittr "%>%"
 #' 
 #' @export
-eq_location_clean <- function(filename = 'data/signif.txt') {
-  loc <- suppressMessages(readr::read_tsv(filename, progress = F)) 
+eq_location_clean <- function(filename = NOAA) {
+  loc <- filename
   loc <- dplyr::select(loc, I_D, COUNTRY, LOCATION_NAME) 
   loc <- tidyr::separate(loc, LOCATION_NAME, into = c('delete', 'City'), sep = ': ', 
                     extra = 'merge', fill = 'right') 
