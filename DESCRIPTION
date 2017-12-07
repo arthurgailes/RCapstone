@@ -5,11 +5,10 @@ Authors@R: person("Arthur", "Gailes", email = "agailes1@gmail.com", role = c("au
 Description: The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 Depends: R (>= 3.4.2),
 Imports: dplyr, ggplot2,leaflet,tidyr, lubridate
-License: GPL-3
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
-
