@@ -156,6 +156,7 @@ eq_create_label <- function() {
 #' @importFrom leaflet addCircleMarkers
 #' @examples 
 #' eq_map('Date')
+#' @export
 eq_map <- function(annot_col = 'popup_text') {
   map_data <- eq_clean_data() 
   map_data <- dplyr::left_join(map_data, eq_location_clean(), by = 'I_D')
