@@ -7,3 +7,14 @@ library(roxygen2)
 
 #use_readme_rmd()
 #use_vignette('')
+
+
+#' Pipe operator
+#'
+#' @name %>%
+#' @rdname pipe
+#' @keywords internal
+#' @export
+#' @importFrom magrittr %>%
+#' @usage lhs \%>\% rhs
+NULL

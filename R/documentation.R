@@ -1,6 +1,5 @@
 #' Imports the U.S. National Oceanographic and Atmospheric Administation's (NOAA) 
-#' dataset of significant earthquakes. For more info, visit: 
-#' \hret{https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1}{click here}
+#' dataset of significant earthquakes. For more info, see the readme file.
 #' 
 #' The package imports the data, cleans it, and then produces visualizations of earthquake
 #'  data in select countries beginning in 2000.
@@ -19,7 +18,7 @@
 #' @importFrom magrittr "%>%"
 #' @import magrittr
 #'
-#'@export
+#' @export
 eq_clean_data <- function(filename = NOAA) {
   
   table <- filename 

@@ -1,5 +1,6 @@
 ---
 output: github_document
+
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -13,12 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
-# The Coursera R Capstone Project
+# The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 
-The Coursera R Capstone Project examines earthquack data from
-Imports the U.S. National Oceanographic and Atmospheric Administation's (NOAA) 
-dataset of significant earthquakes for more info, visit: 
-\hret{https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1}{click here}
+The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project examines earthquake data from  the U.S. National Oceanographic and Atmospheric Administation's (NOAA) dataset of significant earthquakes for more info, visit: [click here](https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1).
 
 ## Installation
 
@@ -29,7 +27,7 @@ You can install RCapstone from github with:
 devtools::install_github("arthurgailes/RCapstone")
 ```
 
-## Load cleaned data
+## Read and clean data
 
 This loads the earthquake data used for the graphs
 
@@ -41,7 +39,7 @@ data <- eq_clean_data()
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
-```{r graph_timeline, eval=T}
+```{r graph_timeline, eval=F}
 geom_timeline()
 ```
 
@@ -50,7 +48,7 @@ geom_timeline()
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
-```{r graph_timeline_labeled, eval=T}
+```{r graph_timeline_labeled, eval=F}
 geom_timeline_label()
 ```
 
@@ -58,6 +56,6 @@ geom_timeline_label()
 
 Generates a Map of earthquakes in Mexico after 2000. The radius of the circles corresponds to the magnitude of the earthquakes.
 
-```{r Mexico_map, eval=T}
+```{r Mexico_map, eval=F}
 eq_map()
 ```

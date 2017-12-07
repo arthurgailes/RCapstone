@@ -3,7 +3,7 @@
 The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 ===============================================================================
 
-The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project examines earthquake data from the U.S. National Oceanographic and Atmospheric Administation's (NOAA) dataset of significant earthquakes for more info, visit:
+The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project examines earthquake data from the U.S. National Oceanographic and Atmospheric Administation's (NOAA) dataset of significant earthquakes for more info, visit: [click here](https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1).
 
 Installation
 ------------
