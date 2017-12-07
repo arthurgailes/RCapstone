@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.org/arthurgailes/RCapstone.svg?branch=master)](https://travis-ci.org/arthurgailes/RCapstone)
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 ===============================================================================

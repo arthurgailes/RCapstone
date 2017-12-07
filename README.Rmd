@@ -3,6 +3,7 @@ output: github_document
 #output: html_document #This will allow interactive map, but it is too big, and html doesn't work on github.
 
 ---
+[![Build Status](https://travis-ci.org/arthurgailes/RCapstone.svg?branch=master)](https://travis-ci.org/arthurgailes/RCapstone)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
