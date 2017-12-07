@@ -45,7 +45,7 @@ eq_clean_data <- function(filename = NOAA) {
 #' @seealso \code{\link{eq_clean_data}}
 #' 
 #' @examples
-#' eq_location_clean('data/signif.txt') 
+#' eq_location_clean() 
 #' 
 #' @importFrom tidyr separate
 #' @importFrom dplyr select
