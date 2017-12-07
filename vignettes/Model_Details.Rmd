@@ -24,25 +24,26 @@ The data examined is the U.S. National Oceanographic and Atmospheric Administati
 
 You can install RCapstone from github with:
 
-```{r gh-installation, eval = F}
+```{r gh-installation, eval = T}
 # install.packages("devtools")
 devtools::install_github("arthurgailes/RCapstone")
+NOAA <- RCapstone::NOAA
 ```
 
 ## Reading and cleaning data.
 
 The functions *eq_clean_data* and *eq_location_data* format the NOAA dataset to return data on earthquake details and location, respectively. Both functions are used to produce the graphs in the data. 
 ```{r load_data, eval=F}
-data <- eq_clean_data()
-cities <- eq_location_clean()
+data <- RCapstone::eq_clean_data()
+cities <- RCapstone::eq_location_clean()
 ```
 
 ## Timeline of earthquakes in US and China after 2000
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
-```{r graph_timeline, eval=F}
-geom_timeline()
+```{r graph_timeline, eval=T}
+RCapstone::geom_timeline()
 ```
 
 ## Labeled arthquakes in US and China after 2000
@@ -50,14 +51,14 @@ geom_timeline()
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
-```{r graph_timeline_labeled, eval=F}
-geom_timeline_label()
+```{r graph_timeline_labeled, eval=T}
+RCapstone::geom_timeline_label()
 ```
 
 ## Interactive Map of earthquakes in Mexico
 
 Generates a Map of earthquakes in Mexico after 2000. The radius of the circles corresponds to the magnitude of the earthquakes.
 
-```{r Mexico_map, eval=F}
-eq_map()
+```{r Mexico_map, eval=T}
+RCapstone::eq_map()
 ```

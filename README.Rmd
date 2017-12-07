@@ -1,5 +1,6 @@
 ---
-output: github_document
+#output: github_document
+output: html_document
 
 ---
 
@@ -32,7 +33,7 @@ NOAA <- RCapstone::NOAA
 
 This loads the earthquake data used for the graphs
 
-```{r eq_clean_data, eval=F}
+```{r clean_data, eval=F}
 data <- RCapstone::eq_clean_data()
 ```
 
