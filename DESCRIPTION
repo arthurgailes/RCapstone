@@ -1,8 +1,8 @@
 Package: RCapstone
 Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
+Version: 0.92.1
 Authors@R: person("Arthur", "Gailes", email = "agailes1@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 Depends: R (>= 3.4.2)
 License: GPL-3
 Encoding: UTF-8
@@ -11,3 +11,4 @@ Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
+Remotes:dplyr, ggplot2, leaflet, lubridate, tidyr

@@ -15,8 +15,6 @@
 #' @importFrom dplyr select
 #' @importFrom tidyr unite
 #' @importFrom lubridate as_date
-#' @importFrom magrittr "%>%"
-#' @import magrittr
 #'
 #' @export
 eq_clean_data <- function(filename = NOAA) {
@@ -53,7 +51,6 @@ eq_clean_data <- function(filename = NOAA) {
 #' @importFrom dplyr select
 #' @importFrom dplyr mutate
 #' @importFrom dplyr mutate_all
-#' @importFrom magrittr "%>%"
 #' 
 #' @export
 eq_location_clean <- function(filename = NOAA) {
@@ -76,7 +73,6 @@ eq_location_clean <- function(filename = NOAA) {
 #' 
 #' @importFrom dplyr left_join
 #' @importFrom dplyr filter
-#' @importFrom magrittr "%>%" 
 #' @import ggplot2
 #' 
 #' @examples
@@ -149,8 +145,6 @@ eq_create_label <- function(data = NOAA) {
 #'
 #' @importFrom dplyr left_join
 #' @importFrom dplyr filter
-#' @importFrom dplyr mutate
-#' @importFrom magrittr "%>%" 
 #' @importFrom leaflet leaflet
 #' @importFrom leaflet addTiles
 #' @importFrom leaflet addCircleMarkers
