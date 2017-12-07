@@ -10,6 +10,9 @@ Installation
 
 You can install RCapstone from github with:
 
+    #> Skipping install of 'RCapstone' from a github remote, the SHA1 (fb249b46) has not changed since last install.
+    #>   Use `force = TRUE` to force installation
+
 Read and clean data
 -------------------
 

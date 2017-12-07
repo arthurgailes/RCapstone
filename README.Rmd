@@ -22,25 +22,26 @@ The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project 
 
 You can install RCapstone from github with:
 
-```{r gh-installation, eval = FALSE}
+```{r gh-installation, eval = T}
 # install.packages("devtools")
 devtools::install_github("arthurgailes/RCapstone")
+NOAA <- RCapstone::NOAA
 ```
 
 ## Read and clean data
 
 This loads the earthquake data used for the graphs
 
-```{r load_data, eval=FALSE}
-data <- eq_clean_data()
+```{r eq_clean_data, eval=F}
+data <- RCapstone::eq_clean_data()
 ```
 
 ## Earthquakes in US and China after 2000
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
-```{r graph_timeline, eval=F}
-geom_timeline()
+```{r graph_timeline, eval=T}
+RCapstone::geom_timeline()
 ```
 
 ## Labeled arthquakes in US and China after 2000
@@ -48,14 +49,14 @@ geom_timeline()
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
-```{r graph_timeline_labeled, eval=F}
-geom_timeline_label()
+```{r graph_timeline_labeled, eval=T}
+RCapstone::geom_timeline_label()
 ```
 
 ## Map of earthquakes in Mexico
 
 Generates a Map of earthquakes in Mexico after 2000. The radius of the circles corresponds to the magnitude of the earthquakes.
 
-```{r Mexico_map, eval=F}
-eq_map()
+```{r Mexico_map, eval=T}
+RCapstone::eq_map()
 ```
