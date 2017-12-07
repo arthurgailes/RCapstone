@@ -14,7 +14,7 @@ eq_location_clean(filename = NOAA)
 the original dataset.
 }
 \examples{
-eq_location_clean('data/signif.txt') 
+eq_location_clean() 
 
 }
 \seealso{
