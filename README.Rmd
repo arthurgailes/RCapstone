@@ -1,6 +1,6 @@
 ---
-#output: github_document
-output: html_document
+output: github_document
+#output: html_document #This will allow interactive map, but it is too big, and html doesn't work on github.
 
 ---
 
@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-",
-  echo = FALSE
+  echo = TRUE
 )
 ```
 
@@ -23,26 +23,31 @@ The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project 
 
 You can install RCapstone from github with:
 
-```{r gh-installation, eval = T}
+```{r gh-installation, eval=F}
 # install.packages("devtools")
+devtools::install_github("arthurgailes/RCapstone")
+```
+
+```{r data_variable, eval = T, include=F, echo = F}
 devtools::install_github("arthurgailes/RCapstone")
 NOAA <- RCapstone::NOAA
 ```
+
 
 ## Read and clean data
 
 This loads the earthquake data used for the graphs
 
 ```{r clean_data, eval=F}
-data <- RCapstone::eq_clean_data()
+data <- RCapstone::eq_clean_data(RCapstone::NOAA)
 ```
 
 ## Earthquakes in US and China after 2000
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
-```{r graph_timeline, eval=T}
-RCapstone::geom_timeline()
+```{r graph_timeline, eval=T, fig.width=6, fig.height=3}
+RCapstone::geom_timeline(RCapstone::NOAA)
 ```
 
 ## Labeled arthquakes in US and China after 2000
@@ -50,14 +55,20 @@ RCapstone::geom_timeline()
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
-```{r graph_timeline_labeled, eval=T}
-RCapstone::geom_timeline_label()
+```{r graph_timeline_labeled, eval=T, fig.width=6, fig.height=5}
+RCapstone::geom_timeline_label(RCapstone::NOAA)
 ```
 
 ## Map of earthquakes in Mexico
 
 Generates a Map of earthquakes in Mexico after 2000. The radius of the circles corresponds to the magnitude of the earthquakes.
 
-```{r Mexico_map, eval=T}
-RCapstone::eq_map()
+```{r Mexico_map, eval=F, fig.width=6, fig.height=5}
+RCapstone::eq_map(data = RCapstone::NOAA)
+#the interactive version cannot be displayed on Github
+```
+
+
+```{r, out.width = "600px", eval = T, echo = F}
+knitr::include_graphics("README-mexico_map.png")
 ```

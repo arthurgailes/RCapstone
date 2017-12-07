@@ -10,25 +10,50 @@ Installation
 
 You can install RCapstone from github with:
 
-    #> Skipping install of 'RCapstone' from a github remote, the SHA1 (fb249b46) has not changed since last install.
-    #>   Use `force = TRUE` to force installation
+``` r
+# install.packages("devtools")
+devtools::install_github("arthurgailes/RCapstone")
+```
 
 Read and clean data
 -------------------
 
 This loads the earthquake data used for the graphs
 
+``` r
+data <- RCapstone::eq_clean_data(RCapstone::NOAA)
+```
+
 Earthquakes in US and China after 2000
 --------------------------------------
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
+
+``` r
+RCapstone::geom_timeline(RCapstone::NOAA)
+```
+
+![](README-graph_timeline-1.png)
 
 Labeled arthquakes in US and China after 2000
 ---------------------------------------------
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
+``` r
+RCapstone::geom_timeline_label(RCapstone::NOAA)
+```
+
+![](README-graph_timeline_labeled-1.png)
+
 Map of earthquakes in Mexico
 ----------------------------
 
 Generates a Map of earthquakes in Mexico after 2000. The radius of the circles corresponds to the magnitude of the earthquakes.
+
+``` r
+RCapstone::eq_map(data = RCapstone::NOAA)
+#the interactive version cannot be displayed on Github
+```
+
+<img src="README-mexico_map.png" width="600px" />

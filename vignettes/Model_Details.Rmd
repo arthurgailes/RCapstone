@@ -24,8 +24,12 @@ The data examined is the U.S. National Oceanographic and Atmospheric Administati
 
 You can install RCapstone from github with:
 
-```{r gh-installation, eval = T}
+```{r gh-installation, eval=F}
 # install.packages("devtools")
+devtools::install_github("arthurgailes/RCapstone")
+```
+
+```{r data_variable, eval = T, include=F}
 devtools::install_github("arthurgailes/RCapstone")
 NOAA <- RCapstone::NOAA
 ```
@@ -42,7 +46,7 @@ cities <- RCapstone::eq_location_clean()
 
 This graphs earthquakes in US and China after 2000; the radius of the circles charts the richter-scale magnitude of the earthquakes.
 
-```{r graph_timeline, eval=T}
+```{r graph_timeline, eval=F, fig.width=5}
 RCapstone::geom_timeline()
 ```
 
@@ -51,7 +55,7 @@ RCapstone::geom_timeline()
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
 
-```{r graph_timeline_labeled, eval=T}
+```{r graph_timeline_labeled, eval=T, fig.width=6, fig.height=5}
 RCapstone::geom_timeline_label()
 ```
 
