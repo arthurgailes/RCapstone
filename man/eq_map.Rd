@@ -4,7 +4,7 @@
 \alias{eq_map}
 \title{Mexico earthquake map}
 \usage{
-eq_map(annot_col = "popup_text")
+eq_map(annot_col = "popup_text", data = NOAA)
 }
 \value{
 \code{eq_map} generates a map of earthquakes in Mexico since 2000;

@@ -4,7 +4,7 @@
 \alias{geom_timeline_label}
 \title{Graph the earthquake timeline for the US and China, with high magnitudes noted.}
 \usage{
-geom_timeline_label()
+geom_timeline_label(data = NOAA)
 }
 \description{
 Graph the earthquake timeline for the US and China, with high magnitudes noted.

@@ -4,7 +4,7 @@
 \alias{eq_create_label}
 \title{Creating the "popup_text" parameter. Not meant for use.}
 \usage{
-eq_create_label()
+eq_create_label(data = NOAA)
 }
 \description{
 \code{eq_create_label} is used by \code{eq_map} to create the popup_text parameter,

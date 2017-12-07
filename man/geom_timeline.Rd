@@ -4,7 +4,7 @@
 \alias{geom_timeline}
 \title{Graph the timeline}
 \usage{
-geom_timeline()
+geom_timeline(data = NOAA)
 }
 \description{
 \code{geom_timeline} returns a graph of earthquakes from 2000-2017 in the USA 

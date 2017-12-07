@@ -83,8 +83,8 @@ eq_location_clean <- function(filename = NOAA) {
 #' geom_timeline()
 #' 
 #' @export
-geom_timeline <- function() {
-  graph_data <- eq_clean_data() 
+geom_timeline <- function(data = NOAA) {
+  graph_data <- eq_clean_data(data) 
   graph_data <- dplyr::left_join(graph_data, eq_location_clean(), by = 'I_D') 
   graph_data <- dplyr::filter(graph_data, COUNTRY == 'China' | COUNTRY == 'Usa')
   
@@ -113,15 +113,15 @@ geom_timeline <- function() {
 #' geom_timeline_label()
 #' 
 #' @export
-geom_timeline_label <- function(){
+geom_timeline_label <- function(data = NOAA){
   # graph_data <- eq_clean_data() 
   # graph_data <- dplyr::left_join(graph_data, eq_location_clean(), by = 'I_D') 
   # graph_data <- dplyr::filter(graph_data, COUNTRY == 'China' | COUNTRY == 'Usa')
   
-  geom_timeline() +
+  geom_timeline(data) +
     ggplot2::geom_text(ggplot2::aes(label = ifelse(graph_data$Richter_Magnitude >5, 
                                as.character(graph_data$City),'')),
-            angle = 45, hjust = 'bottom', nudge_y = 0.1, size = 2) 
+            angle = 45, hjust = 'bottom', nudge_y = 0.1, size = 3) 
 }
 
 #' Creating the "popup_text" parameter. Not meant for use.
@@ -131,7 +131,7 @@ geom_timeline_label <- function(){
 #' 
 #' @examples 
 #' eq_map('popup_text')
-eq_create_label <- function() {
+eq_create_label <- function(data = NOAA) {
   orig <- eq_clean_data() 
   orig <- dplyr::left_join(orig, eq_location_clean(), by = 'I_D')
   orig <- dplyr::filter(orig, COUNTRY == 'Mexico') 
@@ -157,8 +157,8 @@ eq_create_label <- function() {
 #' @examples 
 #' eq_map('Date')
 #' @export
-eq_map <- function(annot_col = 'popup_text') {
-  map_data <- eq_clean_data() 
+eq_map <- function(annot_col = 'popup_text', data = NOAA) {
+  map_data <- eq_clean_data(data) 
   map_data <- dplyr::left_join(map_data, eq_location_clean(), by = 'I_D')
   map_data <- dplyr::filter(map_data, COUNTRY == 'Mexico') 
   map_data <- dplyr::mutate(map_data, popup_text = eq_create_label())
