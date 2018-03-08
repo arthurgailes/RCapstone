@@ -20,7 +20,7 @@ devtools::install_github("arthurgailes/RCapstone")
 Read and clean data
 -------------------
 
-This loads the earthquake data used for the graphs
+This function loads and formats the earthquake data used for the graphs
 
 ``` r
 data <- RCapstone::eq_clean_data(RCapstone::NOAA)

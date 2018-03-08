@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 # The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project
 
-The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project examines earthquake data from  the U.S. National Oceanographic and Atmospheric Administation's (NOAA) dataset of significant earthquakes for more info, visit: [click here](https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1).
+The Coursera/Johns Hopkins Mastering Software Development in R Capstone Project examines earthquake data from  the U.S. National Oceanographic and Atmospheric Administation's (NOAA) dataset of significant earthquakes. For more info, visit: [click here](https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1).
 
 ## Installation
 
@@ -37,7 +37,7 @@ NOAA <- RCapstone::NOAA
 
 ## Read and clean data
 
-This loads the earthquake data used for the graphs
+This function loads and formats the earthquake data used for the graphs
 
 ```{r clean_data, eval=F}
 data <- RCapstone::eq_clean_data(RCapstone::NOAA)
@@ -51,7 +51,7 @@ This graphs earthquakes in US and China after 2000; the radius of the circles ch
 RCapstone::geom_timeline(RCapstone::NOAA)
 ```
 
-## Labeled arthquakes in US and China after 2000
+## Labeled earthquakes in US and China after 2000
 
 This graphs earthquakes in US and China after 2000; the radius of the circles
 charts the richter-scale magnitude of the earthquakes. The largest earthquakes are labeled.
@@ -71,5 +71,5 @@ RCapstone::eq_map(data = RCapstone::NOAA)
 
 
 ```{r, out.width = "600px", eval = T, echo = F}
-knitr::include_graphics("README-mexico_map.png")
+knitr::include_graphics("README-mexico_map.PNG")
 ```
