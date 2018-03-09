@@ -58,4 +58,4 @@ RCapstone::eq_map(data = RCapstone::NOAA)
 #the interactive version cannot be displayed on Github
 ```
 
-<img src="README-mexico_map.png" width="600px" />
+<img src="README-mexico_map.PNG" width="600px" />
